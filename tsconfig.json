@@ -1,0 +1,26 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "incremental": true,
+    "lib": [ "es2021" ],
+    "moduleResolution": "node16",
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ],
+    "declaration": true,
+    "inlineSources": true,
+    "newLine": "lf",
+    "outDir": "dist",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "stripInternal": true
+  },
+  "include": [
+    "src",
+    "types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

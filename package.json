@@ -1,0 +1,64 @@
+{
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/$PACKAGE_NAME",
+  "lsd:components": "dist/components/components.jsonld",
+  "lsd:contexts": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/$PACKAGE_NAME/^1.0.0/components/context.jsonld": "dist/components/context.jsonld"
+  },
+  "lsd:importPaths": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/$PACKAGE_NAME/^1.0.0/components/": "dist/components/",
+    "https://linkedsoftwaredependencies.org/bundles/npm/$PACKAGE_NAME/^1.0.0/config/": "config/",
+    "https://linkedsoftwaredependencies.org/bundles/npm/$PACKAGE_NAME/^1.0.0/dist/": "dist/"
+  },
+  "files": [
+    "config",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:ts && npm run build:components",
+    "build:components": "componentsjs-generator -s src -c dist/components -i .componentsignore",
+    "build:ts": "tsc",
+    "lint": "npm run lint:eslint && npm run lint:markdown",
+    "lint:eslint": "eslint . --cache --max-warnings 0",
+    "lint:markdown": "markdownlint-cli2",
+    "release": "commit-and-tag-version",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jest": "^29.5.12",
+    "commit-and-tag-version": "^12.4.2",
+    "componentsjs-generator": "^4.0.1",
+    "husky": "^4.3.8",
+    "jest": "^29.7.0",
+    "markdownlint-cli2": "^0.13.0",
+    "opinionated-eslint-config": "^0.1.0",
+    "simple-git": "^3.25.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm run lint && npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commit-and-tag-version": {
+    "scripts": {
+      "postbump": "ts-node ./scripts/upgradeConfig.ts",
+      "postchangelog": "markdownlint-cli2 --fix"
+    },
+    "writerOpts": {
+      "commitsSort": false
+    },
+    "skip": {
+      "tag": true
+    }
+  }
+}
