@@ -26,6 +26,21 @@ This can be changed in `jest.config.js`.
 Note that the `test` folder has its own tsconfig.json.
 This is necessary to make sure those files are not built but are covered by the linter.
 
+Coverage will be generated when testing,
+but no coverage restrictions are set.
+If you want to ensure 100% code coverage,
+add the following to your `jest.config.js`:
+
+```text
+coverageThreshold: {
+  './src': {
+    branches: 100,
+    functions: 100,
+    lines: 100,
+    statements: 100,
+  }
+```
+
 ## Linting
 
 Linting is done using [opinionated-eslint-config](https://github.com/joachimvh/opinionated-eslint-config).
