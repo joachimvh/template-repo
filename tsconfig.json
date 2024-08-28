@@ -2,8 +2,6 @@
   "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "incremental": true,
-    "lib": [ "es2021" ],
-    "moduleResolution": "node16",
     "typeRoots": [
       "types",
       "node_modules/@types"
