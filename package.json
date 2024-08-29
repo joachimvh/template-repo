@@ -56,9 +56,6 @@
     },
     "writerOpts": {
       "commitsSort": false
-    },
-    "skip": {
-      "tag": true
     }
   }
 }
