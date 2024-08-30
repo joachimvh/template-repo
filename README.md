@@ -121,4 +121,4 @@ but in case you do not want to do that, this can be removed with the following s
     * Change the `build` script to only perform the steps of `build:ts` and remove `build:components`.
     * Remove the `componentsjs-generator` dependency.
     * In the `commit-and-tag-version` settings, remove the `postbump` step.
-* Remove the `scripts/upgradeConfig.ts` and `.componentsignore` files.
+* Remove the `config/dummy.json`, `scripts/upgradeConfig.ts`, and `.componentsignore` files.
