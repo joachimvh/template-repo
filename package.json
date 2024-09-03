@@ -22,8 +22,11 @@
     "build:components": "componentsjs-generator -s src -c dist/components -i .componentsignore",
     "build:ts": "tsc",
     "lint": "npm run lint:eslint && npm run lint:markdown",
+    "lint:fix": "npm run lint:eslint:fix && npm run lint:markdown:fix",
     "lint:eslint": "eslint . --cache --max-warnings 0",
+    "lint:eslint:fix": "npm run lint:eslint -- --fix",
     "lint:markdown": "markdownlint-cli2",
+    "lint:markdown:fix": "npm run lint:markdown -- --fix",
     "release": "commit-and-tag-version",
     "test": "jest"
   },
