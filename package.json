@@ -17,6 +17,9 @@
     "config",
     "dist"
   ],
+  "engines": {
+    "node": ">=18.14"
+  },
   "scripts": {
     "build": "npm run build:ts && npm run build:components",
     "build:components": "componentsjs-generator -s src -c dist/components -i .componentsignore",
@@ -44,7 +47,7 @@
     "simple-git": "^3.25.0",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.8.3"
   },
   "husky": {
     "hooks": {
