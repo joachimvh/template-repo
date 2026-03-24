@@ -47,7 +47,7 @@
     "simple-git": "^3.32.3",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^6.0.2"
   },
   "husky": {
     "hooks": {
