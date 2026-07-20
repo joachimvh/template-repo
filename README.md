@@ -107,8 +107,7 @@ contact_links:
 
 A Dependabot config is included in `.github/dependabot.yml`
 to get notified when new major releases of libraries get released.
-You still have to manually add Dependabot to your repository
-as described [here](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide).
+You still have to [manually add Dependabot to your repository](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide).
 If you also want to be notified of minor/patch releases you will have to update the configuration.
 
 ## Removing Components.js

@@ -1,8 +1,6 @@
 module.exports = {
   transform: {
-    '^.+\\.ts$': [ 'ts-jest', {
-      tsconfig: 'tsconfig.json',
-    }],
+    '^.+\\.ts$': '@swc/jest',
   },
   // Only run tests in the unit and integration folders.
   // All test files need to have the suffix `.test.ts`.
