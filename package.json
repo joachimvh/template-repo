@@ -43,7 +43,7 @@
     "componentsjs-generator": "^4.3.0",
     "husky": "^4.3.8",
     "jest": "^30.4.2",
-    "markdownlint-cli2": "^0.23.1",
+    "markdownlint-cli2": "^0.23.3",
     "opinionated-eslint-config": "^0.1.0",
     "simple-git": "^3.36.0",
     "ts-node": "^10.9.2",
