@@ -47,7 +47,7 @@
     "opinionated-eslint-config": "^0.1.0",
     "simple-git": "^3.36.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   },
   "husky": {
     "hooks": {
